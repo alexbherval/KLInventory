@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kaszmar Leonardos - Sistema Web</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="mystyle.css" />
+    <link rel="stylesheet" href="formStyle.css" />
+  </head>
+  <body>
+    <div class="sidebar">
+      <div class="logo">
+        <img src="Logo Vertical.png" alt="Kaszmar Leonardos" />
+      </div>
+      <ul>
+        <li>
+          <a
+            href="#"
+            data-toggle="collapse"
+            data-target="#cadastroDropdown"
+            aria-expanded="false"
+            aria-controls="cadastroDropdown"
+          >
+            <i class="bi bi-stack"></i> <span>Cadastro</span>
+            <i class="bi bi-chevron-down float-right"></i>
+          </a>
+          <ul class="collapse" id="cadastroDropdown">
+            <li>
+              <a href="http://127.0.0.1:5500/template/cadAtivos"
+                ><i class="bi bi-windows"></i> <span>Ativos</span></a
+              >
+            </li>
+            <li>
+              <a href="http://127.0.0.1:5500/template/cadParceiro"
+                ><i class="bi bi-building-fill-add"></i>
+                <span>Parceiro</span></a
+              >
+            </li>
+            <li>
+              <a href="http://127.0.0.1:5500/template/cadUsuario"
+                ><i class="bi bi-person-fill-check"></i> <span>Usuário</span></a
+              >
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#"
+            ><i class="bi bi-magnet-fill"></i> <span>Associar</span></a
+          >
+        </li>
+
+        <li>
+          <a
+            href="#"
+            data-toggle="collapse"
+            data-target="#relatorioDropdown"
+            aria-expanded="false"
+            aria-controls="relatorioDropdown"
+          >
+            <i class="bi bi-bar-chart-line-fill"></i> <span>Relatórios</span>
+            <i class="bi bi-chevron-down float-right"></i>
+          </a>
+          <ul class="collapse" id="relatorioDropdown">
+            <li>
+              <a href="#"><i class="bi bi-windows"></i> <span>Ativos</span></a>
+            </li>
+            <li>
+              <a href="#"
+                ><i class="bi bi-file-earmark-text-fill"></i>
+                <span>Contratos</span></a
+              >
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <div class="btnsComand d-flex flex-column">
+        <button class="btn btn-danger mt-auto">
+          <i class="bi bi-box-arrow-left"></i> Sair
+        </button>
+      </div>
+    </div>
+
+    <div class="content">
+      <!--Inicio do Formulario-->
+      <div class="container">
+        <div class="card">
+          <div class="card-header">
+            <i class="bi bi-motherboard-fill"></i>
+            <span>CADASTRO DE PARCEIROS</span>
+          </div>
+          <div class="card-body">
+            <form class="pt-3">
+              <div class="form-row">
+                <div class="form-group col-md-3 mb-3">
+                  <label for="cnpj">CNPJ</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="cnpj"
+                    placeholder="Digite o CNPJ"
+                  />
+                </div>
+
+                <div class="form-group col-md-6 mb-3">
+                  <label for="razaoSocial">Razão Social</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="razaoSocial"
+                    placeholder="Digite a razão social ou nome fantazia"
+                  />
+                </div>
+                <div class="form-group col-md-3 mb-3 frmSelect">
+                  <div class="custom-switch">
+                    <input
+                      type="checkbox"
+                      class="custom-control-input"
+                      id="isActive"
+                    />
+                    <label class="custom-control-label" for="isActive"
+                      >Prestador</label
+                    >
+                  </div>
+
+                  <div class="custom-switch">
+                    <input
+                      type="checkbox"
+                      class="custom-control-input"
+                      id="disponivel"
+                    />
+                    <label class="custom-control-label" for="disponivel"
+                      >Fornecedor</label
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group col-md-2 mb-3">
+                  <label for="cep">CEP</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="cep"
+                    placeholder="Digite o bairro"
+                  />
+                </div>
+                <div class="form-group col-md-10 mb-3">
+                  <label for="logradouro">Logradouro</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="logradouro"
+                    placeholder="Digite o logradouro"
+                  />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-2 mb-3">
+                  <label for="numeroEnd">Nº</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="numeroEnd"
+                    placeholder="Digite o número"
+                  />
+                </div>
+                <div class="form-group col-md-4 mb-3">
+                  <label for="bairro">Bairro</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="bairro"
+                    placeholder="Digite o bairro"
+                  />
+                </div>
+
+                <div class="form-group col-md-3 mb-3">
+                  <label for="municipio">Múnicipio</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="municipio"
+                    placeholder="Digite o bairro"
+                  />
+                </div>
+
+                <div class="form-group col-md-3 mb-3">
+                  <label for="estado">Estado</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="estado"
+                    placeholder="Digite o bairro"
+                  />
+                </div>
+              </div>
+
+              <div class="conguration">
+                <h5>Contato</h5>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group col-md-4 mb-3">
+                  <label for="memoria">Nome</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="memoria"
+                    placeholder="Digite nome do contato"
+                  />
+                </div>
+                <div class="form-group col-md-4 mb-3">
+                  <label for="processador">Celular</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="processador"
+                    placeholder="digite celular | whatsApp"
+                  />
+                </div>
+                <div class="form-group col-md-4 mb-3">
+                  <label for="hd">E-mail</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="hd"
+                    placeholder="Digite email | teams"
+                  />
+                </div>
+              </div>
+
+              <div class="btnForm pt-2 pb-2">
+                <button type="submit" class="btn btn-danger">
+                  <i class="bi bi-node-plus-fill"></i> Salvar
+                </button>
+                <button type="submit" class="btn btn-danger">
+                  <i class="bi bi-node-minus-fill"></i> Cancelar
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- Final fo formulario-->
+    </div>
+
+    <button class="toggle-sidebar">
+      <i class="bi bi-list"></i>
+    </button>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+      // Toggle do menu retrátil
+      $(document).ready(function () {
+        var sidebar = $(".sidebar");
+        var content = $(".content");
+        var toggleButton = $(".toggle-sidebar");
+
+        toggleButton.click(function () {
+          sidebar.toggleClass("collapsed");
+          content.toggleClass("collapsed");
+          toggleButton.toggleClass("show");
+        });
+      });
+    </script>
+  </body>
+</html>

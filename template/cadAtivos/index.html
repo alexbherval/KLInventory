@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kaszmar Leonardos - Sistema Web</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="mystyle.css" />
+    <link rel="stylesheet" href="formStyle.css" />
+  </head>
+  <body>
+    <div class="sidebar">
+      <div class="logo">
+        <img src="Logo Vertical.png" alt="Kaszmar Leonardos" />
+      </div>
+      <ul>
+        <li>
+          <a
+            href="#"
+            data-toggle="collapse"
+            data-target="#cadastroDropdown"
+            aria-expanded="false"
+            aria-controls="cadastroDropdown"
+          >
+            <i class="bi bi-stack"></i> <span>Cadastro</span>
+            <i class="bi bi-chevron-down float-right"></i>
+          </a>
+          <ul class="collapse" id="cadastroDropdown">
+            <li>
+              <a href="http://127.0.0.1:5500/template/cadAtivos"
+                ><i class="bi bi-windows"></i> <span>Ativos</span></a
+              >
+            </li>
+            <li>
+              <a href="http://127.0.0.1:5500/template/cadParceiro"
+                ><i class="bi bi-building-fill-add"></i>
+                <span>Parceiro</span></a
+              >
+            </li>
+            <li>
+              <a href="http://127.0.0.1:5500/template/cadUsuario"
+                ><i class="bi bi-person-fill-check"></i> <span>Usuário</span></a
+              >
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#"
+            ><i class="bi bi-magnet-fill"></i> <span>Associar</span></a
+          >
+        </li>
+
+        <li>
+          <a
+            href="#"
+            data-toggle="collapse"
+            data-target="#relatorioDropdown"
+            aria-expanded="false"
+            aria-controls="relatorioDropdown"
+          >
+            <i class="bi bi-bar-chart-line-fill"></i> <span>Relatórios</span>
+            <i class="bi bi-chevron-down float-right"></i>
+          </a>
+          <ul class="collapse" id="relatorioDropdown">
+            <li>
+              <a href="#"><i class="bi bi-windows"></i> <span>Ativos</span></a>
+            </li>
+            <li>
+              <a href="#"
+                ><i class="bi bi-file-earmark-text-fill"></i>
+                <span>Contratos</span></a
+              >
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <div class="btnsComand d-flex flex-column">
+        <button class="btn btn-danger mt-auto">
+          <i class="bi bi-box-arrow-left"></i> Sair
+        </button>
+      </div>
+    </div>
+
+    <div class="content">
+      <!--Inicio do Formulario-->
+      <div class="container">
+        <div class="card">
+          <div class="card-header">
+            <i class="bi bi-motherboard-fill"></i>
+            <span>CADASTRO DE ATIVOS</span>
+          </div>
+          <div class="card-body">
+            <form class="pt-3">
+              <div class="form-row">
+                <div class="form-group col-md-3 mb-3">
+                  <label for="nome">Nome</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="nome"
+                    placeholder="Digite o alias do ativo"
+                  />
+                </div>
+
+                <div class="form-group col-md-3 mb-3">
+                  <label for="modelo">Modelo</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="modelo"
+                    placeholder="Digite o modelo"
+                  />
+                </div>
+                <div class="form-group col-md-3 mb-3">
+                  <label for="marca">Marca</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="marca"
+                    placeholder="Digite a marca do ativo"
+                  />
+                </div>
+                <div class="form-group col-md-3 mb-3 frmSelect">
+                  <div class="custom-switch">
+                    <input
+                      type="checkbox"
+                      class="custom-control-input"
+                      id="isActive"
+                      checked
+                    />
+                    <label class="custom-control-label" for="isActive"
+                      >Ativo</label
+                    >
+                  </div>
+
+                  <div class="custom-switch">
+                    <input
+                      type="checkbox"
+                      class="custom-control-input"
+                      id="disponivel"
+                      checked
+                    />
+                    <label class="custom-control-label" for="disponivel"
+                      >Disponivél</label
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group col-md-4 mb-3">
+                  <label for="serial">Serial</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="serial"
+                    placeholder="Digite o Nº de série do ativo"
+                  />
+                </div>
+
+                <div class="form-group col-md-4 mb-3">
+                  <label for="numeroControle">Número de Controle</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="numeroControle"
+                    placeholder="Digite o número de controle"
+                  />
+                </div>
+
+                <div class="form-group col-md-4 mb-3">
+                  <label for="nfe">NFe</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="nfe"
+                    placeholder="Digite o Nº da NFe"
+                  />
+                </div>
+              </div>
+
+              <div class="congguration">
+                <h5>Configuração</h5>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group col-md-4 mb-3">
+                  <label for="memoria">Memória</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="memoria"
+                    placeholder="Digite a memória"
+                  />
+                </div>
+                <div class="form-group col-md-4 mb-3">
+                  <label for="processador">Processador</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="processador"
+                    placeholder="digite o processador"
+                  />
+                </div>
+                <div class="form-group col-md-4 mb-3">
+                  <label for="hd">HD</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="hd"
+                    placeholder="Digite a capacidade do HD"
+                  />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-12 mb-3">
+                  <label for="obs">Obs</label>
+                  <textarea
+                    class="form-control"
+                    id="obs"
+                    placeholder="Digite observações do ativo"
+                  ></textarea>
+                </div>
+              </div>
+
+              <div class="btnForm pt-2 pb-2">
+                <button type="submit" class="btn btn-danger">
+                  <i class="bi bi-node-plus-fill"></i> Salvar
+                </button>
+                <button type="submit" class="btn btn-danger">
+                  <i class="bi bi-node-minus-fill"></i> Cancelar
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- Final fo formulario-->
+    </div>
+
+    <button class="toggle-sidebar">
+      <i class="bi bi-list"></i>
+    </button>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+      // Toggle do menu retrátil
+      $(document).ready(function () {
+        var sidebar = $(".sidebar");
+        var content = $(".content");
+        var toggleButton = $(".toggle-sidebar");
+
+        toggleButton.click(function () {
+          sidebar.toggleClass("collapsed");
+          content.toggleClass("collapsed");
+          toggleButton.toggleClass("show");
+        });
+      });
+    </script>
+  </body>
+</html>

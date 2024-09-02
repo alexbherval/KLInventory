@@ -1,0 +1,98 @@
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.logo {
+  text-align: center;
+  padding: 20px;
+}
+
+.logo img {
+  max-width: 100px; /* Reduzido o tamanho da imagem */
+  margin: 0 auto; /* Centraliza horizontalmente */
+}
+
+.sidebar {
+  background-color: #fff;
+  padding: 30px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  transition: width 0.3s; /* Adiciona transição para o menu retrátil */
+}
+
+.sidebar.collapsed {
+  width: 60px; /* Largura do menu quando retraído */
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li span {
+  color: #9f0016;
+}
+
+.sidebar li a {
+  display: block;
+  padding: 15px 20px;
+  text-decoration: none;
+  color: #333;
+  transition: background-color 0.3s;
+}
+
+.sidebar li a i {
+  margin-right: 10px;
+  color: #9f0016;
+}
+
+.sidebar li a:hover {
+  background-color: #f0f0f0;
+}
+
+.sidebar li a.collapsed span {
+  /* display: none; /* Oculta o texto do menu retraído */
+}
+
+.sidebar .btnsComand {
+  padding-top: 20%;
+}
+
+.content {
+  margin-left: 250px;
+  padding: 30px;
+  transition: margin-left 0.3s; /* Adiciona transição para a content */
+}
+
+.content.collapsed {
+  margin-left: 60px; /* Ajusta a margem esquerda para a content */
+}
+
+/* Estilos para o botão de toggle do menu */
+.toggle-sidebar {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 100;
+  cursor: pointer;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: none; /* Oculta o botão inicialmente */
+}
+
+.toggle-sidebar.show {
+  display: block; /* Exibe o botão quando o menu é retraído */
+}
+
+/* Estilos para o botão de toggle do menu */
+.toggle-sidebar i {
+  font-size: 20px;
+  color: #333;
+}

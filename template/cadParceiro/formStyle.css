@@ -1,0 +1,26 @@
+.content form .frmSelect {
+  padding-top: 25px;
+}
+
+.content .container .card .card-header {
+  background-color: #9f0016;
+}
+
+.content .container .card .card-header i,
+span {
+  color: #fefefe;
+  font-weight: 600;
+}
+
+.custom-control-input:checked ~ .custom-control-label::before {
+  color: #fff;
+  border-color: #9f0016;
+  background-color: #9f0016;
+}
+
+.conguration h5 {
+  font-size: large;
+  color: #9f0016;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
